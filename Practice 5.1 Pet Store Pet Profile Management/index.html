@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pet Store</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <h1>Pet Store - Pet Profile Management</h1>
+
+  <div class="container">
+    <!-- novalidate: the validation is done with JavaScript -->
+    <form id="petForm" novalidate>
+      <div class="form-group">
+        <label for="name">Pet Name</label>
+        <input type="text" id="name">
+        <div class="error-message">The name is required.</div>
+      </div>
+
+      <div class="form-group">
+        <label for="description">Description</label>
+        <input type="text" id="description">
+      </div>
+
+      <div class="form-group">
+        <label for="image">Image URL</label>
+        <input type="url" id="image">
+        <div class="error-message">Enter a valid image URL (.jpg, .jpeg, .png or .gif).</div>
+      </div>
+
+      <div class="form-group">
+        <label for="birthdate">Birthdate</label>
+        <input type="date" id="birthdate">
+        <div class="error-message">Enter a birthdate that is not in the future.</div>
+      </div>
+
+      <div class="form-group">
+        <label for="price">Price</label>
+        <input type="number" id="price">
+        <div class="error-message">The price must be greater than 0.</div>
+      </div>
+
+      <div class="form-group">
+        <label for="code">Pet Code</label>
+        <input type="text" id="code">
+        <div class="error-message">Three letters followed by three numbers (e.g. CAT123).</div>
+      </div>
+
+      <div class="form-group">
+        <input type="checkbox" id="sold">
+        <label for="sold" class="checkbox-label">Sold</label>
+      </div>
+
+      <button type="submit" id="submitBtn">Add Pet</button>
+    </form>
+
+    <div id="petList" class="pet-list"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
