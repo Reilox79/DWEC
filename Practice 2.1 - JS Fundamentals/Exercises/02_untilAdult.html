@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container"></div>
+    <script>
+        let age;
+
+        do {
+            const input = prompt("Enter the person's age: ");
+            age = Number(input);
+
+            if (isNaN(age)) {
+                alert("That's not a valid number. Try again.");
+            } else if (age < 18) {
+                alert("You must be 18 or older. Try again.");
+            }
+        } while (isNaN(age) || age < 18);
+
+        console.log("The person is now an adult.");
+        const container = document.getElementById("container");
+        container.innerHTML = "<h1>Welcome to my awesome website for adult people</h1>";
+    </script>
+</body>
+</html>
