@@ -1,0 +1,24 @@
+.button {
+  padding: var(--space-2) var(--space-4);
+  font-weight: bold;
+  color: var(--on-primary);
+  background: var(--primary);
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+.button:hover:not(:disabled) {
+  background: var(--primary-hover);
+}
+
+.button:disabled {
+  color: var(--muted);
+  background: var(--border);
+  cursor: not-allowed;
+}
+
+.button:focus-visible {
+  outline: var(--border-width) solid var(--text);
+  outline-offset: var(--space-1);
+}

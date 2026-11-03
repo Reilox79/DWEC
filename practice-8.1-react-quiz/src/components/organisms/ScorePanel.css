@@ -1,0 +1,10 @@
+.score-panel {
+  display: grid;
+  justify-items: center;
+  gap: var(--space-3);
+  text-align: center;
+}
+
+.score-panel__message {
+  color: var(--muted);
+}

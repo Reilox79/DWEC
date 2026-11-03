@@ -1,0 +1,10 @@
+.start-screen {
+  display: grid;
+  justify-items: center;
+  gap: var(--space-3);
+  text-align: center;
+}
+
+.start-screen__text {
+  color: var(--muted);
+}

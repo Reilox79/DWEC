@@ -1,0 +1,38 @@
+.answer-option {
+  display: flex;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  border: var(--border-width) solid var(--border);
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+.answer-option:hover {
+  border-color: var(--primary);
+}
+
+.answer-option:focus-within {
+  outline: var(--border-width) solid var(--primary);
+  outline-offset: var(--space-1);
+}
+
+/* --correct and --wrong go AFTER --selected so they win */
+.answer-option--selected {
+  border-color: var(--primary);
+  background: var(--primary-soft);
+}
+
+.answer-option--correct {
+  border-color: var(--success);
+  background: var(--success-soft);
+}
+
+.answer-option--wrong {
+  border-color: var(--danger);
+  background: var(--danger-soft);
+}
+
+.answer-option--disabled {
+  cursor: default;
+  pointer-events: none;
+}
