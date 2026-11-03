@@ -1,6 +1,7 @@
 import Button from '../atoms/Button'
 import './StartScreen.css'
 
+// Props come from QuizPage: total = TOTAL (5), onStart = startGame
 function StartScreen({ total, onStart }) {
   return (
     <div className='start-screen'>

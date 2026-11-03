@@ -1,5 +1,6 @@
 import './ProgressBar.css'
 
+// Props come from QuizPage: value = currentIndex + 1, max = questions.length
 function ProgressBar({ value, max }) {
   const percent = (value / max) * 100
 

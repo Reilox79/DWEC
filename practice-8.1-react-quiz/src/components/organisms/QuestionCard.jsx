@@ -10,6 +10,8 @@ function getStatus(answer, question, selected, locked) {
   return 'idle'
 }
 
+// Props come from QuizPage:
+// question = current question, selected = user's answer, locked = answered?, onSelect = handleSelect
 function QuestionCard({ question, selected, locked, onSelect }) {
   const titleId = 'question-' + question.id
 
@@ -36,8 +38,10 @@ function QuestionCard({ question, selected, locked, onSelect }) {
         ))}
       </div>
 
+      {/* Only shown when the question is answered (locked) */}
       {locked && (
         <p className='question-card__feedback' role='status'>
+          {/* condition ? if true : if false */}
           {selected === question.correct ? 'Correct!' : 'The right answer was: ' + question.correct}
         </p>
       )}

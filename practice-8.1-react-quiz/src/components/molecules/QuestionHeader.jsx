@@ -1,6 +1,7 @@
 import Badge from '../atoms/Badge'
 import './QuestionHeader.css'
 
+// Props come from QuestionCard (the data of the current question)
 function QuestionHeader({ id, category, difficulty, text }) {
   return (
     <div className='question-header'>

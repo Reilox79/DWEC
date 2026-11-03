@@ -7,6 +7,7 @@ function getMessage(score, total) {
   return 'Keep practising!'
 }
 
+// Props come from QuizPage: score, total = questions.length, onPlayAgain = startGame
 function ScorePanel({ score, total, onPlayAgain }) {
   return (
     <div className='score-panel'>

@@ -1,16 +1,17 @@
 import './AnswerOption.css'
 
+// Props come from QuestionCard (one AnswerOption per answer)
 function AnswerOption({ name, text, checked, status, disabled, onSelect }) {
-  // Keep only the classes that apply (filter removes the false ones)
+  // Each line is a class name or false ("a && b" gives b only if a is true)
   const classes = [
-    'answer-option',
-    checked && 'answer-option--selected',
-    status === 'correct' && 'answer-option--correct',
-    status === 'wrong' && 'answer-option--wrong',
-    disabled && 'answer-option--disabled',
+    'answer-option', // Always
+    checked && 'answer-option--selected', // If the user picked it
+    status === 'correct' && 'answer-option--correct', // Green
+    status === 'wrong' && 'answer-option--wrong', // Red
+    disabled && 'answer-option--disabled', // If already answered
   ]
-    .filter(Boolean)
-    .join(' ')
+    .filter(Boolean) // Remove the false values
+    .join(' ') // Join with spaces: "answer-option answer-option--correct"
 
   return (
     <label className={classes}>
